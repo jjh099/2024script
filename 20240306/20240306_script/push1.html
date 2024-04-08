@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" value="여기에 이름을 쓰세요." class="member" />
+    <button class="btn">클릭</button>
+
+    <ul class="vList"></ul>
+
+    <script>
+      const todoElem = document.getElementsByClassName("member")[0];
+      const bElm = document.getElementsByClassName("btn")[0];
+      const vListelm = document.getElementsByClassName("vList")[0];
+      const list = ["조재희", "노윤환", "김단비", "김도현"];
+
+      bElm.addEventListener("click", function () {
+        list.push(todoElem.value);
+        todoElem.value = "";
+
+        let textList = "";
+        for (let i = 0; i < list.length; i++) {
+          textList += `<li><div>${list[i]}</div></li>`;
+        }
+
+        vListelm.innerHTML = textList;
+      });
+    </script>
+  </body>
+</html>

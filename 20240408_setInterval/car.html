@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="panel">
+      <div class="bar"></div>
+      <div class="car">
+        <img src="./car.png" alt="" />
+      </div>
+    </div>
+    <div class="btnWrap">
+      <button class="startBtn">start</button>
+      <button class="stopBtn">stop</button>
+    </div>
+
+    <script src="jquery.min.js"></script>
+
+    <script>
+      const nStart = $(".car").position().left; //부모를 기준으로 값을 바꿔줌
+      // nStart = car의 left 값(50) 자동차의 현재 위치
+
+      const nEnd = nStart + $(".bar").width() - $(".car").width(); // 50 + 500 - 120
+      // nEnd(끝나는값) = 현위치(50) + bar width(500) - 자동차의 가로길이(120)
+      //$(".bar").width() bar에 width 값
+
+      let nStep = 2;
+      // 자동차의 움직임
+      // 양수로 설정하면 오른쪽, 음수로 설정하면 왼쪽으로 움직임
+      let current = nStart; // 자동차의 현재위치
+      let timeId;
+      let doubleClick = true;
+
+      // $(".startBtn").click(function(){}) 초기값
+      // $(".startBtn").click(function(){}) 초기값
+
+      $(".startBtn").click(function () {
+        if (doubleClick == true) {
+          timeId = setInterval(movie, 30);
+          //      movie 함수를 불러옴 괄호생략
+          doubleClick = false;
+          // doubleClick이 거짓이기 때문에 doubleClick이 안됨
+        }
+      });
+      $(".stopBtn").click(function () {
+        clearInterval(timeId); // timeId를 멈춰줌
+        doubleClick = true;
+      });
+
+      function movie() {
+        current += nStep;
+        //current = current(50) + nStep(2)
+        // current(현위치)가 2씩 오른쪽으로 이동하게 해줌
+
+        console.log(current);
+        $(".car").css("left", current); //car의 왼쪽값을 기준으로 현재위치 변경
+
+        // current 값이 if 안에서 변경되고 있어서 아래 코드를 같은 블럭에 넣어야 실행됨
+        // 다른곳으로 빠지면 실행안됨
+        if (current > nEnd) {
+          //current(현위치)가 nEnd(끝나는 값)보다 커지면 car가 멈추게 해줌
+
+          nStep = -nStep;
+          // 현재 움직이던 방향과 반대로 움직이게 해줌
+
+          $(".car").addClass("rotate");
+          // car를 좌우반전 해줌
+        }
+
+        // 현위치가 시작점보다 작아지면
+        if (current < nStart) {
+          nStep = -nStep;
+          // 현재 움직이던 방향과 반대로 움직이게 해줌
+
+          $(".car").removeClass("rotate");
+          //rotate를 없애줘야 car가 좌우반전됨
+        }
+      }
+    </script>
+  </body>
+</html>

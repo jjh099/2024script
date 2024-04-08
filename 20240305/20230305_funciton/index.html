@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function fname(mon, name) {
+        // let mon = 500
+        var 실행변수 = 100 + mon;
+        // document.write(실행문);
+        document.write("나의 이름은 " + name);
+        return 실행변수;
+      }
+
+      //   fname(500)
+
+      let num = fname(500, "홍길동"); //인자 호출
+      console.log(num);
+    </script>
+
+    <script>
+      function printMsg(name, age) {
+        // alert("학생정보없음");
+        document.write("학생의 이름은 " + name + "이고,<br>");
+        document.write("학생의 나이는 " + age + "세 입니다.<br>");
+
+
+        const nameElm = document.getElementsByClassName('name')
+
+        
+        for(let i=0;i<length;i++){
+            nameElm[i].innerHTML = name
+        }
+
+
+
+        document.getElementsByClassName('name')[0].innerHTML = name;
+      }
+    </script>
+
+    <div>
+        이름은 <span class="name">나</span>이고, 나이는</span class="age">0</span>세 입니다.
+    </div>
+
+    <button onclick="printMsg('홍길동', 20)">학생정보</button>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Link Styles */
+      a:link,
+      a:visited {
+        text-decoration: none; /* 'text-decoration' 속성을 올바르게 설정합니다. */
+      }
+
+      /* List Styles */
+      ul,
+      li {
+        list-style: none;
+      }
+
+      /* Layer Styles */
+      .layer {
+        display: flex;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+      }
+      .layer > li {
+        width: 300px;
+      }
+      .layer img {
+        width: 100%;
+      }
+
+      /* layer */
+      .glayLayer{
+        position: fixed ;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: 0.3
+    </style>
+  </head>
+  <body>
+    <ul class="layer">
+      <li>
+        <a href="./images/img1.jpg"><img src="./images/img1.jpg" alt="" /></a>
+      </li>
+      <li>
+        <a href="./images/img2.jpg"><img src="./images/img2.jpg" alt="" /></a>
+      </li>
+      <li>
+        <a href="./images/img3.jpg"><img src="./images/img3.jpg" alt="" /></a>
+      </li>
+    </ul>
+
+    <div class="glayLayer">
+      <div class="overLayer">
+        <img src="./images/img1.jpg" alt="" />
+      </div>
+    </div>
+  </body>
+</html>

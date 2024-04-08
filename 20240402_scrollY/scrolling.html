@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      a:link,
+      a:visited {
+        text-decoration: none;
+        color: #222;
+      }
+
+      .box {
+        position: fixed;
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+        right: 0;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .top {
+        position: fixed;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: skyblue;
+        right: 0;
+        bottom: 0;
+        cursor: pointer;
+      }
+
+      ul,
+      li {
+        list-style: none;
+      }
+
+      .wrap {
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 16px;
+        height: 80px;
+        background-color: #f00;
+        transition: 0.3s;
+      }
+
+      .wrap ul {
+        display: flex;
+        height: 100%;
+      }
+
+      .wrap li {
+        height: 100%;
+        transition: 0.3s;
+      }
+
+      .wrap li a {
+        display: flex;
+        height: 100%;
+        padding: 0 16px;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .wrap li:hover {
+        background-color: skyblue;
+        border-radius: 10px;
+      }
+
+      .wrap.fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        background-color: rgba(255, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">scroll: <span class="scrollY">0</span></div>
+    <div class="wrapper">
+      <p>jo001</p>
+      <p>jo002</p>
+      <p>jo003</p>
+      <p>jo004</p>
+      <p>jo005</p>
+      <p>jo006</p>
+      <p>jo007</p>
+      <p>jo008</p>
+      <p>jo009</p>
+      <p>jo010</p>
+      <p>jo011</p>
+      <p>jo012</p>
+      <p>jo013</p>
+      <p>jo014</p>
+      <p>jo015</p>
+      <p>jo016</p>
+      <p>jo017</p>
+      <p>jo018</p>
+      <p>jo019</p>
+      <p>jo020</p>
+      <p>jo021</p>
+      <p>jo022</p>
+      <p>jo023</p>
+      <p>jo024</p>
+      <p>jo025</p>
+      <p>jo026</p>
+      <p>jo027</p>
+      <p>jo028</p>
+      <p>jo029</p>
+      <p>jo030</p>
+      <p>jo031</p>
+      <p>jo032</p>
+      <p>jo033</p>
+      <p>jo034</p>
+      <p>jo035</p>
+      <p>jo036</p>
+      <p>jo037</p>
+      <p>jo038</p>
+      <p>jo039</p>
+      <p>jo040</p>
+      <p>jo041</p>
+      <p>jo042</p>
+      <p>jo043</p>
+      <p>jo044</p>
+      <p>jo045</p>
+      <p>jo046</p>
+      <p>jo047</p>
+      <p>jo048</p>
+      <p>jo049</p>
+      <p>jo050</p>
+      <div class="wrap">
+        <h1>logo</h1>
+        <ul>
+          <li><a href="#">menu1</a></li>
+          <li><a href="#">menu2</a></li>
+          <li><a href="#">menu3</a></li>
+          <li><a href="#">menu4</a></li>
+          <li><a href="#">menu5</a></li>
+        </ul>
+      </div>
+      <p>jo051</p>
+      <p>jo052</p>
+      <p>jo053</p>
+      <p>jo054</p>
+      <p>jo055</p>
+      <p>jo056</p>
+      <p>jo057</p>
+      <p>jo058</p>
+      <p>jo059</p>
+      <p>jo060</p>
+      <p>jo061</p>
+      <p>jo062</p>
+      <p>jo063</p>
+      <p>jo064</p>
+      <p>jo065</p>
+      <p>jo066</p>
+      <p>jo067</p>
+      <p>jo068</p>
+      <p>jo069</p>
+      <p>jo070</p>
+      <p>jo071</p>
+      <p>jo072</p>
+      <p>jo073</p>
+      <p>jo074</p>
+      <p>jo075</p>
+      <p>jo076</p>
+      <p>jo077</p>
+      <p>jo078</p>
+      <p>jo079</p>
+      <p>jo080</p>
+      <p>jo081</p>
+      <p>jo082</p>
+      <p>jo083</p>
+      <p>jo084</p>
+      <p>jo085</p>
+      <p>jo086</p>
+      <p>jo087</p>
+      <p>jo088</p>
+      <p>jo089</p>
+      <p>jo090</p>
+      <p>jo091</p>
+      <p>jo092</p>
+      <p>jo093</p>
+      <p>jo094</p>
+      <p>jo095</p>
+      <p>jo096</p>
+      <p>jo097</p>
+      <p>jo098</p>
+      <p>jo099</p>
+      <p>jo100</p>
+    </div>
+    <div class="top">top</div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      let wrapTop = $(".wrap").offset().top;
+      console.log(wrapTop);
+
+      //윈도우에서 스크롤 하면 scrollfunstion 함수를 실행 아래 다 똑같은거
+      //   function scrollfunction() {
+      //     console.log("scroll");
+      //   }
+
+      //   function scrollFuc(){
+
+      //   }
+
+      //   $(window).scroll(csrollFuc)
+
+      //   $(window).scroll(scrollfunction);
+
+      //   $(window).scroll(function(){})
+
+      $(window).scroll(() => {
+        let scrollY = window.pageYOffset;
+        // console.log(scrolly);
+
+        $(".scrollY").html(scrollY);
+
+        if (wrapTop < scrollY) {
+          console.log("스크롤 커짐");
+          $(".wrap").addClass("fixed");
+        } else {
+          console.log("작음");
+          $(".wrap").removeClass("fixed");
+        }
+      });
+    </script>
+  </body>
+</html>

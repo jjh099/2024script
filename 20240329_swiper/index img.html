@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        /* */
+        *{
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+
+      .slideImg {
+        background-color: pink;
+        height: 400px;
+        display: block;
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+      }
+
+      .slideImg img {
+        height: 100%;
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, 50%);
+      }
+
+      .textWrap{
+        position: relative;
+        width: 1200px;
+        margin: 0;
+        /* background-color: pink; */
+        height: 100%;
+        display: flex;
+        align-items: center;
+      }
+      .textWrap.right{
+        justify-content: end;
+        text-align: right;
+      }
+      .textBody{
+        background-color: white;
+        padding: 20px;
+
+      }
+      /* .sildeWrap {
+        width: 300px;
+        background-color: skyblue;
+      } */
+      .wrap {
+        height: 400px;
+        overflow: hidden;
+      }
+
+      @media screen  and (max-width: 1200px)
+    {
+      .textWrap{
+            width: 100%;
+            justify-content: center !important;
+  
+          }
+    }
+      
+      
+        
+     
+    </style>
+  </head>
+  <body>
+      
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+      </script>
+
+
+    <div class="wrap">
+      <swiper-container class="slideWrap">
+        <swiper-slide class="slideImg bgimg01">
+       <img src="./images/img1.jpg" alt="">
+       <div class="textWrap right">
+         <div class="testBody">
+          <h3>Lorem ipsum dolor sit amet.</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, cupiditate.</p>
+         </div>
+       </div>
+        </swiper-slide>
+        <swiper-slide class="slideImg bgimg02">
+          <img src="./images/img2.jpg" alt="">
+          <div class="textWrap">
+            <div class="testBody">
+             <h3>Lorem ipsum dolor sit amet.</h3>
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, cupiditate.</p>
+            </div>
+          </div>
+           </swiper-slide>
+           <swiper-slide class="slideImg bgimg03">
+            <img src="./images/img3.jpg" alt="">
+            <div class="textWrap">
+              <div class="testBody">
+               <h3>Lorem ipsum dolor sit amet.</h3>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, cupiditate.</p>
+              </div>
+            </div>
+             </swiper-slide>
+             <swiper-slide class="slideImg bgimg04">
+              <img src="./images/img4.jpg" alt="">
+              <div class="textWrap">
+                <div class="testBody">
+                 <h3>Lorem ipsum dolor sit amet.</h3>
+                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, cupiditate.</p>
+                </div>
+              </div>
+               </swiper-slide>
+               <swiper-slide class="slideImg bgimg05">
+                <img src="./images/img5.jpg" alt="">
+                <div class="textWrap">
+                  <div class="testBody">
+                   <h3>Lorem ipsum dolor sit amet.</h3>
+                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, cupiditate.</p>
+                  </div>
+                </div>
+                 </swiper-slide>
+                 <swiper-slide class="slideImg bgimg06">
+                  <img src="./images/img6.jpg" alt="">
+                  <div class="textWrap">
+                    <div class="testBody">
+                     <h3>Lorem ipsum dolor sit amet.</h3>
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, cupiditate.</p>
+                    </div>
+                  </div>
+
+      </swiper-container>
+    </div>
+    <div class="container" style="height: 400px; background-color: red"></div>
+  </body>
+</html>

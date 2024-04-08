@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+        opacity: 1;
+        transition: 1s;
+      }
+
+      .box.view {
+        opacity: 0;
+        height: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <button onclick="stopBtn()">멈춤</button>
+    <!-- 자바스크립트-->
+    <button onclick="startBtn()">시작</button>
+    <!-- 자바스크립트-->
+    <!-- <button onclick="{stopBtn()}">멈춤</button> //리액트 -->
+
+    <script>
+      // 1초뒤에 한번 실행됨
+      setTimeout(function () {
+        document.querySelector(".box").classList.add("view");
+        console.log("view생성");
+      }, 3000);
+
+      let move = 2;
+      let step = 2;
+      let timeId; // 함수내에 있는 timeId를 전역변수로 사용하기 위해 빈값으로 따로 뺌
+      let doubleClick = true; // 이중클릭 막아주기 위한 것
+
+      // 1초마다 계속 실행됨
+      function startBtn() {
+        if (doubleClick == true) {
+          timeId = setInterval(function () {
+            move += step; // 2 + 2
+            console.log(move);
+          }, 1000);
+          doubleClick = false; // 더블클릭 false로 값 바꿔줌
+          // 더블클릭이 처음엔 true여서 버튼이 눌리지만 후에 더블클릭을 false로 바꿔줘서 버튼이 실행안됨
+        }
+      }
+      // startBtn()
+
+      // 비동기함수
+      // 1초마다 계속 실행됨
+      // let timeId = setInterval(function () {
+      //   // move += move; // move(10) = move(10) + move(10)
+      //   move += step; // 2 + 2
+      //   console.log(move);
+      // }, 1000);
+
+      function stopBtn() {
+        // alert("test");
+        clearInterval(timeId); //interval 멈춰주는거
+        console.log("move stop!!");
+        doubleClick = true;
+      }
+      // setInterval(() => {}, interval);
+    </script>
+  </body>
+</html>

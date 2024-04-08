@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        /* */
+      .slideImg {
+        /* background-color: pink; */
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-position: center;
+        background: #0ff url("./images/img2.jpg") no-repeat center; /*no-repeat:패턴 하나만 보이게 해줌*/
+        background-size: 600px;
+       /* background-position은 background에 포함 되어 있기 때문에 
+         background보다 먼저 선언하면 명령 취소됨(background 기본값으로 설정)*/
+        /* background-position: center;  background 이미지 위치 조정 */
+      }
+      .slideImg.bgimg01{
+        background-image: url("./images/img2.jpg");
+      }
+      .slideImg.bgimg02{
+        background-image: url("./images/img1.jpg");
+      }
+      .slideImg.bgimg03{
+        background-image: url("./images/img3.jpg");
+      }
+      .slideImg.bgimg04{
+        background-image: url("./images/img4.jpg");
+      }
+      .slideImg.bgimg05{
+        background-image: url("./images/img5.jpg");
+      }
+      .slideImg.bgimg06{
+        background-image: url("./images/img6.jpg");
+      }
+      .slideImg img {
+        width: 100%;
+        display: block;
+      }
+      /* .sildeWrap {
+        width: 300px;
+        background-color: skyblue;
+      } */
+      .wrap {
+        height: 400px;
+        overflow: hidden;
+      }
+      .header{
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .header h1{
+        text-align: center;
+        background-color: skyblue;
+
+      }
+    </style>
+  </head>
+  <body>
+      
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+      </script>
+
+      <div class="header">
+        <h1>test</h1>
+      </div>
+    <div class="wrap">
+      <swiper-container class="slideWrap">
+        <swiper-slide class="slideImg bgimg01">
+        test1
+        </swiper-slide>
+        <swiper-slide class="slideImg bgimg02">
+        test2
+        </swiper-slide>
+        <swiper-slide class="slideImg bgimg03">
+        test3
+        </swiper-slide>
+        <swiper-slide class="slideImg bgimg04">
+        test4
+        </swiper-slide>
+        <swiper-slide class="slideImg bgimg05">
+        test5
+        </swiper-slide>
+        <swiper-slide class="slideImg bgimg06">
+        test6
+        </swiper-slide>
+
+        </swiper-slide>
+      </swiper-container>
+    </div>
+    <div class="container" style="height: 400px; background-color: red"></div>
+  </body>
+</html>

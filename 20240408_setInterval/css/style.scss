@@ -1,0 +1,70 @@
+// reset
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #333;
+}
+ul,
+li {
+  list-style: none;
+}
+
+// html,
+// body {
+//   // height: 100%;
+// }
+
+body //컨테이너
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.panel //아이템
+{
+  width: 600px;
+  height: 300px;
+  border: 1px solid #000;
+  position: relative;
+  .bar {
+    width: 500px;
+    height: 10px;
+    background: red;
+    position: absolute;
+    left: 50px;
+    top: 190px;
+  }
+
+  .car {
+    // w 120px * h70px
+    position: absolute;
+    left: 50px;
+    top: calc(190px - 70px); //clac : 계산해주는 함수
+    &.rotate {
+      transform: rotateY(180deg); //car의 중심을 기준으로 좌우로 돌아감
+      // transform: rotateX(180deg); //car의 중심을 기준으로 상하로 돌아감
+    }
+  }
+}
+
+.btnWrap //아이템
+{
+  // body에 align center로 되어있어서 줄어들어 있었음
+  // align-self: stretch 해주면 크기 늘어남
+
+  // background: skyblue;
+  width: 600px;
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+  padding: 10px 0;
+}
